@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depunere Dosar Casa Verde 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Casa Verde 2025</h1>
+            <p>Formular electronic pentru depunere dosar</p>
+        </div>
+
+        <form class="form-grid" method="POST" action="https://script.google.com/macros/s/AKfycbyXAT5mD82ma8awxHLfxhL9IFaLivj4l6K5QiGOjIM13ysnDxq9R_fQjjK_ZWeTQcR3/exec" name="contact-form">
+            <!-- Toate câmpurile formularului rămân aceleași -->
+            <div class="form-group">
+                <label class="required" for="nume">Nume</label>
+                <input type="text" id="nume" name="nume" required placeholder="Popescu">
+            </div>
+
+            <div class="form-group">
+                <label class="required" for="prenume">Prenume</label>
+                <input type="text" id="prenume" name="prenume" required placeholder="Maria">
+            </div>
+
+            <div class="form-group">
+                <label class="required" for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="exemplu@email.com">
+            </div>
+
+            <div class="form-group">
+                <label class="required">Telefon</label>
+                <div class="phone-container">
+                    <div class="prefix-select">
+                        <select id="prefix" name="prefix">
+                            <option value="40">🇷🇴 +40</option>
+                            <option value="49">🇩🇪 +49</option>
+                            <option value="33">🇫🇷 +33</option>
+                            <option value="39">🇮🇹 +39</option>
+                            <option value="34">🇪🇸 +34</option>
+                        </select>
+                    </div>
+                    <input type="tel" id="telefon" name="telefon" class="phone-input" required placeholder="xxx xxx xxx">
+                </div>
+            </div>
+
+            <div class="form-group" style="grid-column: 1/-1">
+                <label class="required" for="adresa">Adresă instalare</label>
+                <input type="text" id="adresa" name="adresa" required placeholder="Județ, localitate">
+            </div>
+
+            <div class="form-group" style="grid-column: 1/-1">
+                <label for="detalii">Detalii instalație</label>
+                <textarea id="detalii" name="detalii" placeholder="Specificații tehnice, observații..."></textarea>
+            </div>
+
+            <div class="form-group" style="grid-column: 1/-1">
+                <button type="submit">Trimite Cerere</button>
+            </div>
+
+            <div class="form-footer" style="grid-column: 1/-1">
+                <p>Câmpurile marcate cu <span class="required">*</span> sunt obligatorii</p>
+                <p>Datele sunt procesate în conformitate cu GDPR</p>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

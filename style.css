@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.01)),
+                url('https://i.ibb.co/849hQhfm/lekfnv.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    padding: 2.5rem;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    color: #2e7d32;
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.header p {
+    color: #616161;
+    font-size: 0.95rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #455a64;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    color: #424242;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+    color: rgba(66, 66, 66, 0.4);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #4CAF50;
+    background: white;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background: linear-gradient(135deg, #43a047, #2e7d32);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.required::after {
+    content: "*";
+    color: #d32f2f;
+    margin-left: 3px;
+}
+
+.phone-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+.prefix-select {
+    position: relative;
+    flex: 0 1 auto;
+    min-width: 10px;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.prefix-select select {
+    width: 100%;
+    height: 100%;
+    padding: 12px 35px 12px 15px;
+    border: none;
+    background: transparent;
+    appearance: none;
+    cursor: pointer;
+}
+
+.prefix-select::after {
+    content: "▾";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #616161;
+    pointer-events: none;
+}
+
+.phone-input {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .phone-container {
+        flex-direction: column;
+    }
+    
+    .prefix-select {
+        width: 100%;
+    }
+    
+    .phone-input {
+        width: 100%;
+    }
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #757575;
+    font-size: 0.85rem;
+}
+
+.prefix-select select option {
+    padding: 8px 12px;
+    background: white;
+    color: #424242;
+}
+
+button:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
